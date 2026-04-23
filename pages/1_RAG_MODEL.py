@@ -186,19 +186,27 @@ if st.session_state.messages:
         st.session_state.messages = []
         st.rerun()
 
-    html = '<div class="chat-wrap">'
     for msg in st.session_state.messages:
         role = msg["role"]
-        text = msg["text"].replace("\n", "<br>")
-        av = "🩺" if role == "bot" else "🧑"
-        html += f"""
-        <div class="msg-row {role}">
-            <div class="avatar {role}">{av}</div>
-            <div class="bubble {role}">{text}</div>
-        </div>"""
-    html += "</div>"
+        text = msg["text"]
 
-    st.markdown(html, unsafe_allow_html=True)
+        avatar = "🩺" if role == "bot" else "🧑"
+
+        if role == "user":
+            st.markdown(f"""
+            <div class="msg-row user">
+                <div class="avatar user">{avatar}</div>
+                <div class="bubble user">{text}</div>
+            </div>
+            """, unsafe_allow_html=True)
+
+        else:
+            st.markdown(f"""
+            <div class="msg-row bot">
+                <div class="avatar bot">{avatar}</div>
+                <div class="bubble bot">{text}</div>
+            </div>
+            """, unsafe_allow_html=True)
 
 else:
     st.info("Start by asking about clot risk, blood flow, or your model.")

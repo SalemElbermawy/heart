@@ -75,8 +75,13 @@ templete_prompt=ChatPromptTemplate.from_messages([
 4. **Scientific principles** (chemiluminescence, aptasensor functionality, or QCM-aptasensor processes, if relevant) and focus on that more and more.
 
 
-**Format your response as a structured, well-organized explanation** using bullet points or numbered steps, ensuring all information is derived *exclusively* from the provided context. Avoid generalizations or assumptions beyond the given text.
-all data you will get it from the RAG system
+FORMAT RULES:
+- Do NOT use Markdown (no ##, **, *, or - formatting)
+- Write in clean plain text only
+- Use simple sentences separated by new lines
+- Avoid any special formatting symbolsall data you will get it from the RAG system
+You are STRICTLY forbidden from using Markdown syntax.
+Return only plain text.
 
 - reply shortly and with small sentences on the daily question like ["hello", "how are you"] and so on
      
