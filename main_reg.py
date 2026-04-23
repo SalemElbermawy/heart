@@ -59,8 +59,8 @@ model.fit(train_x_scalered,train_y)
 
 y_predict=model.predict(test_x_scalered)
 
-print(mean_squared_error(test_y,y_predict))
-print(r2_score(test_y,y_predict))
+# print(mean_squared_error(test_y,y_predict))
+# print(r2_score(test_y,y_predict))
 
 # import matplotlib.pyplot as plt
 
@@ -109,4 +109,3 @@ def prediction_function(age,systolic_bp,diastolic_bp,bmi,has_diabetes,is_smoker)
 # print(prediction_function(69,193,106,26.9,0,0))
     
     
-print((prediction_function(69,193,106,26.5,0,0)))
