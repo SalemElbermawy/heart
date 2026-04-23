@@ -106,4 +106,3 @@ def response (user_input):
     
     return response_llm.content
 
-print(response("what is the idea of the project"))

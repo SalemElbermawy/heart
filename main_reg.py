@@ -104,10 +104,9 @@ def prediction_function(age,systolic_bp,diastolic_bp,bmi,has_diabetes,is_smoker)
     
     train_x_scalered_test=pd.concat([train_x_scalered_test.reset_index(drop=True),test[["has_diabetes","is_smoker"]].reset_index(drop=True)],axis=1)
     
-    return train_x_scalered_test
+    return model.predict(train_x_scalered_test)
 
 # print(prediction_function(69,193,106,26.9,0,0))
     
     
-print(model.predict(prediction_function(69,193,106,26.5,0,0)))
-print(data.head())
+print((prediction_function(69,193,106,26.5,0,0)))

@@ -3,6 +3,9 @@ import pandas as pd
 
 data= pd.read_excel("dataset.xlsx")
 
+df= pd.read_excel("dataset.xlsx")
+
+
 # print(data.head())
 
 # print(data.describe())
@@ -70,34 +73,60 @@ y_pred = model.predict(test_x_scalered)
 
 accuracy = model.score(test_x_scalered, test_y)
 
-print("Accuracy:", accuracy)
+# print("Accuracy:", accuracy)
 
-from sklearn.metrics import confusion_matrix
+# from sklearn.metrics import confusion_matrix
 
-cm = confusion_matrix(test_y, y_pred)
+# cm = confusion_matrix(test_y, y_pred)
 
-import matplotlib.pyplot as plt
-import seaborn as sns
+# import matplotlib.pyplot as plt
+# import seaborn as sns
 
-plt.figure()
-sns.heatmap(cm, annot=True, fmt='d')
-plt.xlabel("Predicted")
-plt.ylabel("Actual")
-plt.title("Confusion Matrix")
-plt.show()
+# plt.figure()
+# sns.heatmap(cm, annot=True, fmt='d')
+# plt.xlabel("Predicted")
+# plt.ylabel("Actual")
+# plt.title("Confusion Matrix")
+# plt.show()
 
 
-from sklearn.metrics import roc_curve, auc
+# from sklearn.metrics import roc_curve, auc
 
-y_prob = model.predict_proba(test_x_scalered)[:, 1]
+# y_prob = model.predict_proba(test_x_scalered)[:, 1]
 
-fpr, tpr, _ = roc_curve(test_y, y_prob)
-roc_auc = auc(fpr, tpr)
+# fpr, tpr, _ = roc_curve(test_y, y_prob)
+# roc_auc = auc(fpr, tpr)
 
-plt.figure()
-plt.plot(fpr, tpr)
-plt.xlabel("False Positive Rate")
-plt.ylabel("True Positive Rate")
-plt.title("ROC Curve")
-plt.legend()
-plt.show()
+# plt.figure()
+# plt.plot(fpr, tpr)
+# plt.xlabel("False Positive Rate")
+# plt.ylabel("True Positive Rate")
+# plt.title("ROC Curve")
+# plt.legend()
+# plt.show()
+
+def prediction_function(age,systolic_bp,diastolic_bp,bmi,has_diabetes,is_smoker,ir_reading):
+    
+    
+
+    test=pd.DataFrame([[age,systolic_bp,diastolic_bp,bmi,has_diabetes,is_smoker,ir_reading]],columns=["age","systolic_bp","diastolic_bp","bmi","has_diabetes","is_smoker","ir_reading"])
+    train_x_scalered_test=scaler.transform(test.drop(["has_diabetes","is_smoker"],axis="columns"))
+
+    train_x_scalered_test=pd.DataFrame(train_x_scalered_test,columns=["age","systolic_bp","diastolic_bp","bmi","ir_reading"])
+    
+    train_x_scalered_test=pd.concat([train_x_scalered_test.reset_index(drop=True),test[["has_diabetes","is_smoker"]].reset_index(drop=True)],axis=1)
+    
+    return model.predict(train_x_scalered_test)
+
+# print(prediction_function(69,193,106,26.9,0,0,970.2))
+
+# print(train_x_scalered)
+# print("\n\n\n\n")
+# print(train_x)
+
+
+print(prediction_function(78,137,69,32.3,1,0,952.9))
+
+# print(df.head())
+
+
