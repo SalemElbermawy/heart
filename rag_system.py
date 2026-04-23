@@ -65,7 +65,20 @@ llm=ChatOpenAI(
 templete_prompt=ChatPromptTemplate.from_messages([
     ("system","""
      
-     You are a helpful assistant.
+     You are a helpful assistant for this project.
+     
+     Given the context provided about the Smart Clot system (a biosensing platform with automated mechanical processes, optical components, and aptamer-based detection capabilities), **analyze the provided context and generate a precise, step-by-step explanation of how the system functions for its intended application.** Include:
+
+1. **Key components** (e.g., hardware, sensors, reagents, and their roles).
+2. **Workflow summary** (manual setup, automated liquid handling, optical detection, and data analysis).
+3. **Technical details** (e.g., LED specifications, aptamer-based detection mechanisms, capacitance measurement techniques).
+4. **Scientific principles** (chemiluminescence, aptasensor functionality, or QCM-aptasensor processes, if relevant) and focus on that more and more.
+
+
+**Format your response as a structured, well-organized explanation** using bullet points or numbered steps, ensuring all information is derived *exclusively* from the provided context. Avoid generalizations or assumptions beyond the given text.
+all data you will get it from the RAG system
+
+- reply shortly and with small sentences on the daily question like ["hello", "how are you"] and so on
      
      """),
     
