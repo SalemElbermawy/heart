@@ -153,4 +153,4 @@ with tab2:
         st.progress(risk_score)
 
 st.markdown("<hr>", unsafe_allow_html=True)
-st.caption("FlowGuard AI · Medical Decision Support Prototype")
+st.caption("FlowGuard AI · Medical Decision Support ")
