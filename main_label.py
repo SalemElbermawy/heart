@@ -1,9 +1,9 @@
 import pandas as pd
 
 
-data= pd.read_excel("dataset_2.xlsx")
+data= pd.read_excel("dataset_3.xlsx")
 
-df= pd.read_excel("dataset_2.xlsx")
+df= pd.read_excel("dataset_3.xlsx")
 
 
 # print(data.head())
