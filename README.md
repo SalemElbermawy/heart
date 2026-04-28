@@ -63,3 +63,33 @@ Run a prediction from the classification model:
     enter (age, systolic_bp, diastolic_bp, bmi, has_diabetes, is_smoker, ir_reading)
 
 
+
+
+## The data set comes from the reading of my sensor and some from the lab sensor and i did callibration and edit for it and preprocessing
+
+# How to use it 
+
+## Rag_Model 
+
+you can use it to ask it about the idea of the project and the everything related to clot disease like that ::
+
+<img width="1070" height="571" alt="Screenshot 2026-04-28 055142" src="https://github.com/user-attachments/assets/c2a081f1-8d9b-49e4-b22e-0fda246cd9d6" />
+
+
+<img width="883" height="432" alt="image" src="https://github.com/user-attachments/assets/f0234fbf-f05e-4727-a23f-948077287aee" />
+
+<img width="898" height="752" alt="image" src="https://github.com/user-attachments/assets/ed267f77-3b51-435f-94e9-1032c870db8a" />
+
+
+
+## Training models
+
+<img width="1081" height="724" alt="Screenshot 2026-04-25 063459" src="https://github.com/user-attachments/assets/ead7d1a1-90b3-41c8-a00b-bb7a1080ada8" />
+<img width="1120" height="718" alt="Screenshot 2026-04-25 063728" src="https://github.com/user-attachments/assets/221ec9e3-2ad6-4f60-924d-835009ec5deb" />
+<img width="1236" height="837" alt="Screenshot 2026-04-25 063658" src="https://github.com/user-attachments/assets/ea7e67d9-6801-47f3-aca0-4cab7fa64ffb" />
+<img width="1152" height="758" alt="Screenshot 2026-04-25 063552" src="https://github.com/user-attachments/assets/2325eb46-1464-4e67-9706-d6c2f4c88db0" />
+
+
+
+
+
