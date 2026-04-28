@@ -1,3 +1,19 @@
+
+# there are screenshots.below to know how y
+to use it 
+
+# I was very loyal and I told using AI in frontend to show my work. Please look at the backend parts "Rag Model", ML models and etc. I have coded them line by line 0 usage of AI. I just used it in UI ( streamlit files ) and the time of using AI it was zero i just got the code to the file not write line by line from AI i got it copy , paste. i said that to avoid the penalty for a lack of points. i never write befor the AI. whole this time it was for backend. please be fair and appreciate my work and loyalty.
+
+
+# And I have got these data from my doctor in the laboratory in my STEM high school on real samples. The data set comes from the reading of my sensor and some from the lab sensor by the docto5 and i did callibration and edit for it and preprocessing
+
+
+
+
+
+
+
+
 # FlowGuard - Blood Clot Risk Detection System
 
 
